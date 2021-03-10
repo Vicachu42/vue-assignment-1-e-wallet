@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Eighth commit: I'm starting to get satisfied with the design elements. I still need to add some bevel effects on the text and get the logos in the right places, but other than than it's starting to get somewhere. After this I'll work with layering the cards and creating a switch function.
+
 Seventh commit: Computed props fixed! I missed to write in "else if", so the code had nowhere to go.
 
 Sixth commit: Making progress, albeit slowly. I've done a few design elements and managed to put logos in the right places. I also realised that I'm having some issues with my computed props in Card.vue. I unsuccessfully tried to add a props when I noticed that the one who was already there wasn't even working. I removed it and noticed that the page stayed the same, so it probably wasn't necessary. I'm going to keep working on my computed props.

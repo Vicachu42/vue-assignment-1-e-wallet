@@ -35,6 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+  text-transform: uppercase;
   margin-top: 60px;
 }
 </style>
