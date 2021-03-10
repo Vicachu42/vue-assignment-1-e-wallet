@@ -17,6 +17,20 @@ export default {
   name: 'Card',
   props: {
     card: Object
+  },
+  computed: {
+    vendorClass() {
+      if (this.card.vendor === 'Bitcoin') {
+        return 'bitcoin';
+      } else if (this.card.vendor === 'Evil Corp') {
+        return 'evil';
+      } else if (this.card.vendor === 'Ninja Bank') {
+        return 'ninja';
+      } else if (this.card.vendor === 'Block Chain') {
+        return 'blockchain'
+      } else {
+        return 'blank'}
+      }
   }
 }
 </script>
@@ -34,8 +48,20 @@ export default {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.bitcoin {
+  background: linear-gradient(248.04deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 99.07%), #FFAE34;
+}
+
+.evil {
+  background: linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%), #F33355;
+}
+
 .ninja {
   background: linear-gradient(248.3deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #222222;
   color: white;
+}
+
+.blockchain {
+  background: linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%), #8B58F9;
 }
 </style>
