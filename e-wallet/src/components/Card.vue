@@ -1,14 +1,15 @@
 <template>
-<article>
-    <!-- <h3>Here's the individual card</h3> -->
-    <div class="card">
-      <!-- <img class="vendor" alt="vendor"> -->
-      <!-- <p>{{ card.vendor }}</p> -->
+  <div>
+    <article class="card" v-bind:class="vendorClass">
+      <img v-if="card.vendor == 'Bitcoin' " src="@/assets/vendor-bitcoin.svg" alt="Bitcoin">
+      <img v-if="card.vendor == 'Evil Corp' " src="@/assets/vendor-evil.svg" alt="Evil Corp">
+      <img v-if="card.vendor == 'Ninja Bank' " src="@/assets/vendor-ninja.svg" alt="Ninja Bank">
+      <img v-if="card.vendor == 'Block Chain' " src="@/assets/vendor-blockchain.svg" alt="Block Chain">
       <p class="cardNumber">{{ card.cardNumber }}</p>
       <p class="cardHolder">{{ card.cardHolder }}</p>
       <p class="valid">{{ card.valid }}</p>
-    </div>
-  </article>
+    </article>
+  </div>
 </template>
 
 <script>
@@ -16,11 +17,6 @@ export default {
   name: 'Card',
   props: {
     card: Object
-  },
-  computed: {
-    details() {
-      return this.cards.filter((details) => { return details.id === parseInt(this.$route.params.id)});
-    }
   }
 }
 </script>
@@ -38,7 +34,8 @@ export default {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-/* .cardNumber {
-  
-} */
+.ninja {
+  background: linear-gradient(248.3deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #222222;
+  color: white;
+}
 </style>
