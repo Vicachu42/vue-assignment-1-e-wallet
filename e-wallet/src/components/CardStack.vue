@@ -23,5 +23,10 @@ export default {
 </script>
 
 <style>
-
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 </style>

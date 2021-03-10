@@ -22,12 +22,19 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+body {
+  width: 414px;
+  height: 100%;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'PT Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
   margin-top: 60px;
 }
 </style>
