@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Ninth commit: I consider the design elements finished by now. Now I'm moving on to the more functional aspects.
+
 Eighth commit: I'm starting to get satisfied with the design elements. I still need to add some bevel effects on the text and get the logos in the right places, but other than than it's starting to get somewhere. After this I'll work with layering the cards and creating a switch function.
 
 Seventh commit: Computed props fixed! I missed to write in "else if", so the code had nowhere to go.

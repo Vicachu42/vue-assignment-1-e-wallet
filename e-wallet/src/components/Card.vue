@@ -45,13 +45,14 @@ export default {
   height: 241px;
   width: 382px;
   border-radius: 8px;
-  padding: 16px;
+  padding: 20px;
   box-sizing: border-box;
   color: white;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 85% 1fr;
+  grid-template-rows: 45% 35% 20%
+  ;
   grid-template-areas: "cardChip cardLogo"
   "cardNumber cardNumber"
   "cardHolder validThru";
@@ -68,15 +69,16 @@ export default {
 .cardNumber {
   grid-area: cardNumber;
   font-weight: 400;
-  font-size: 29px;
-  line-height: 32,48px;
+  font-size: 30px;
+  line-height: 32.48px;
+  padding: 0;
 }
 
 .cardHolder {
   grid-area: cardHolder;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21,16px;
+  line-height: 21.16px;
   text-align: left;
 }
 
@@ -84,7 +86,7 @@ export default {
   grid-area: validThru;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21,16px;
+  line-height: 21.16px;
   text-align: right;
 }
 
@@ -106,6 +108,4 @@ export default {
 .blockchain {
   background: linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%), #8B58F9;
 }
-
-
 </style>

@@ -11,11 +11,12 @@ export default {
   data() {
     return {
       cards: [
-        { id: 0, vendor: 'Bitcoin', cardNumber: '6720 4519 2443 2976', cardHolder: 'Joe Exotic', valid: '20/02'},
         { id: 1, vendor: 'Evil Corp', cardNumber: '6720 4519 2443 2976', cardHolder: 'Doc Antle', valid: '20/02'},
         { id: 2, vendor: 'Ninja Bank', cardNumber: '6720 4519 2443 2976', cardHolder: 'Jeff Lowe', valid: '20/02'},
-        { id: 3, vendor: 'Block Chain', cardNumber: '6720 4519 2443 2976', cardHolder: 'Carol Baskin', valid: '20/02'}
-      ]
+        { id: 3, vendor: 'Block Chain', cardNumber: '6720 4519 2443 2976', cardHolder: 'Carol Baskin', valid: '20/02'},
+        { id: 3, vendor: 'Bitcoin', cardNumber: '6720 4519 2443 2976', cardHolder: 'John Finlay', valid: '20/02'}
+      ],
+      currentCard: { id: 0, vendor: 'Bitcoin', cardNumber: '6720 4519 2443 2976', cardHolder: 'Joe Exotic', valid: '20/02'}
     }
   }
 }
