@@ -8,7 +8,7 @@
       <img v-bind:class="cardChip" v-if="card.vendor == 'Ninja Bank' " src="@/assets/chip-light.svg" alt="chip">
       <img v-bind:class="cardLogo" v-if="card.vendor == 'Ninja Bank' " src="@/assets/vendor-ninja.svg" alt="Ninja Bank">
       <img v-bind:class="cardChip" v-if="card.vendor == 'Block Chain' " src="@/assets/chip-light.svg" alt="chip">
-      <img v-if="card.vendor == 'Block Chain' " src="@/assets/vendor-blockchain.svg" alt="Block Chain">
+      <img v-bind:class="cardLogo" v-if="card.vendor == 'Block Chain' " src="@/assets/vendor-blockchain.svg" alt="Block Chain">
       <p class="cardNumber">{{ card.cardNumber }}</p>
       <p class="cardHolder">{{ card.cardHolder }}</p>
       <p class="validThru">{{ card.valid }}</p>

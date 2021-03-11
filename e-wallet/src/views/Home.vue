@@ -3,6 +3,7 @@
   <h1>E-wallet</h1>
   <Top v-bind:currentCard="currentCard"/>
   <CardStack v-bind:cards="cards"/>
+  <button>Add a new card</button>
   </div>
 </template>
 
