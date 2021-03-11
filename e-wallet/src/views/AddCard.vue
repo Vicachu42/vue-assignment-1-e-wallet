@@ -1,5 +1,5 @@
 <template>
-  <h1>Homeview</h1>
+  <h1>Add card</h1>
 </template>
 
 <script>

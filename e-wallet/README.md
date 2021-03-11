@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Tenth commit: I had a bit of problem with my routing, but sorted it out through changing my paths. Now I'm getting somewhere.
+
 Ninth commit: I consider the design elements finished by now. Now I'm moving on to the more functional aspects.
 
 Eighth commit: I'm starting to get satisfied with the design elements. I still need to add some bevel effects on the text and get the logos in the right places, but other than than it's starting to get somewhere. After this I'll work with layering the cards and creating a switch function.

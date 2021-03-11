@@ -33,15 +33,15 @@ export default {
       } else if (this.card.vendor === 'Block Chain') {
         return 'blockchain'
       } else {
-        return 'blank'}
+        return 'blank'
       }
+    }
   }
 }
 </script>
 
 <style>
 .card {
-  background-color:lightcoral;
   height: 241px;
   width: 382px;
   border-radius: 8px;

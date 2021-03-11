@@ -19,7 +19,6 @@ export default {
     cards: Array
   }
 }
-
 </script>
 
 <style>

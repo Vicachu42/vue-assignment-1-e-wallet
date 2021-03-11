@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <h1>Testing things out</h1>
-    <router-view v-bind:cards="cards"></router-view>
+    <h1>E-wallet</h1>
+    <router-view v-bind:cards="cards" v-bind:currentCard="currentCard"></router-view>
   </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 body {
   width: 414px;
@@ -37,6 +38,6 @@ body {
   text-align: center;
   color: black;
   text-transform: uppercase;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 </style>
