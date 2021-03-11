@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>E-wallet</h1>
     <router-view v-bind:cards="cards" v-bind:currentCard="currentCard"></router-view>
   </div>
 </template>
@@ -24,17 +23,16 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap');
 
 body {
   width: 414px;
   height: 100%;
+  box-sizing: border-box;
 }
 
 #app {
   font-family: 'PT Mono', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
   text-transform: uppercase;

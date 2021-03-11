@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Eleventh commit: Some steps forward. I'm completely happy with the card designs now and currently working on my home view. I'm mostly trying different things to figure it out, but it's probably time for a break now.
+
 Tenth commit: I had a bit of problem with my routing, but sorted it out through changing my paths. Now I'm getting somewhere.
 
 Ninth commit: I consider the design elements finished by now. Now I'm moving on to the more functional aspects.

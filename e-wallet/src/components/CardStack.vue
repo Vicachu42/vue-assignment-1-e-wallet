@@ -1,7 +1,6 @@
 <template>
   <section>
     <div class="cards">
-      <h2>Here's the card stack</h2>
       <Card v-for="(card, index) in cards" v-bind:key="index" v-bind:card="card"></Card>
     </div>
   </section>
@@ -22,10 +21,5 @@ export default {
 </script>
 
 <style>
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 </style>
