@@ -46,6 +46,13 @@ h1 {
   line-height: 35px;
 }
 
+.currentCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .activeCard {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
@@ -57,7 +64,8 @@ h1 {
   height: 241px;
   width: 382px;
   border-radius: 8px;
-  padding: 20px;
+  padding: 17px;
+  margin-bottom: 60px;
 }
 
 .cards {
@@ -65,7 +73,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 230px;
 }
 
 .card {

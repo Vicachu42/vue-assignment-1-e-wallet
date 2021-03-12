@@ -1,33 +1,48 @@
 <template>
   <div class="addCard">
     <Top message="Add new card" />
-    <form>
+    <section class="blankCard">
+    <Card>
+      <!-- <p>{{ add.number }}</p> -->
+    </Card>
+    </section>
+    <form class="inputForm">
       <label>Card number</label>
-      <input type="text" v-model="add.number" required />
+      <input type="text" v-model="add.number" />
+      <label>Cardholder name</label>
+      <input type="text" v-model="add.name" />
+      <label>Valid thru</label>
+      <input type="text" v-model="add.valid" />
+      <label>CCV</label>
+      <input type="text" v-model="add.CCV" />
+      <label>Card vendor</label>
+      <input type="text" v-model="add.vendor" />
+      <select id="vendors">
+        <option value="bitcoin">Bitcoin</option>
+        <option value="evil">Evil Corp</option>
+        <option value="ninja">Ninja</option>
+        <option value="blockchain">Block Chain</option>
+      </select>
     </form>
-    <p>{{ add.number}}</p>
-    <div id="checkboxes">
-      <label>Ninjas</label>
-      <input type="checkbox" value="ninjas" v-model="add.categories" />
-      <label>Wizards</label>
-      <input type="checkbox" value="wizards" v-model="add.categories" />
-    </div>
-    <p>{{ add.categories }}</p>
   </div>
 </template>
 
 <script>
 import Top from '../components/Top.vue'
+import Card from '../components/Card.vue'
 
 export default {
   components: {
-    Top
+    Top,
+    Card
+  },
+  props: {
+    card: Object
   },
   data() {
     return {
       add: {
-        number: '',
-        categories: []
+        number: ''
       }
     }
   }
