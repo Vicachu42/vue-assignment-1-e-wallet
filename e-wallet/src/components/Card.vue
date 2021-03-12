@@ -1,14 +1,14 @@
 <template>
   <div>
     <article class="card" v-bind:class="vendorClass">
-      <img v-bind:class="cardChip" v-if="card.vendor == 'Bitcoin' " src="@/assets/chip-dark.svg" alt="chip">
-      <img v-bind:class="cardLogo" v-if="card.vendor == 'Bitcoin' " src="@/assets/vendor-bitcoin.svg" alt="Bitcoin">
-      <img v-bind:class="cardChip" v-if="card.vendor == 'Evil Corp' " src="@/assets/chip-light.svg" alt="chip">
-      <img v-bind:class="cardLogo" v-if="card.vendor == 'Evil Corp' " src="@/assets/vendor-evil.svg" alt="Evil Corp">
-      <img v-bind:class="cardChip" v-if="card.vendor == 'Ninja Bank' " src="@/assets/chip-light.svg" alt="chip">
-      <img v-bind:class="cardLogo" v-if="card.vendor == 'Ninja Bank' " src="@/assets/vendor-ninja.svg" alt="Ninja Bank">
-      <img v-bind:class="cardChip" v-if="card.vendor == 'Block Chain' " src="@/assets/chip-light.svg" alt="chip">
-      <img v-bind:class="cardLogo" v-if="card.vendor == 'Block Chain' " src="@/assets/vendor-blockchain.svg" alt="Block Chain">
+      <img class="cardChip" v-if="card.vendor == 'Bitcoin' " src="@/assets/chip-dark.svg" alt="chip">
+      <img class="cardLogo" v-if="card.vendor == 'Bitcoin' " src="@/assets/vendor-bitcoin.svg" alt="Bitcoin">
+      <img class="cardChip" v-if="card.vendor == 'Evil Corp' " src="@/assets/chip-light.svg" alt="chip">
+      <img class="cardLogo" v-if="card.vendor == 'Evil Corp' " src="@/assets/vendor-evil.svg" alt="Evil Corp">
+      <img class="cardChip" v-if="card.vendor == 'Ninja Bank' " src="@/assets/chip-light.svg" alt="chip">
+      <img class="cardLogo" v-if="card.vendor == 'Ninja Bank' " src="@/assets/vendor-ninja.svg" alt="Ninja Bank">
+      <img class="cardChip" v-if="card.vendor == 'Block Chain' " src="@/assets/chip-light.svg" alt="chip">
+      <img class="cardLogo" v-if="card.vendor == 'Block Chain' " src="@/assets/vendor-blockchain.svg" alt="Block Chain">
       <p class="cardNumber">{{ card.cardNumber }}</p>
       <p class="cardHolder">{{ card.cardHolder }}</p>
       <p class="validThru">{{ card.valid }}</p>

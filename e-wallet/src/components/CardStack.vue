@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="cards">
-      <Card v-for="(card, index) in cards" v-bind:key="index" v-bind:card="card"></Card>
+      <Card v-for="(card, index) in cards" v-bind:key="index" v-bind:card="card" v-on:click.native="$emit('switch-card', card.id)"></Card>
     </div>
   </section>
 </template>

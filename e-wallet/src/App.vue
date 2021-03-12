@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view v-bind:cards="cards" v-bind:currentCard="currentCard"></router-view>
+    <router-view v-bind:cards="cards" v-bind:currentCard="currentCard" v-on:switch-card="switchCard"></router-view>
   </div>
 </template>
 
@@ -13,9 +13,21 @@ export default {
         { id: 1, vendor: 'Evil Corp', cardNumber: '6720 4519 2443 2976', cardHolder: 'Doc Antle', valid: '20/02'},
         { id: 2, vendor: 'Ninja Bank', cardNumber: '6720 4519 2443 2976', cardHolder: 'Jeff Lowe', valid: '20/02'},
         { id: 3, vendor: 'Block Chain', cardNumber: '6720 4519 2443 2976', cardHolder: 'Carol Baskin', valid: '20/02'},
-        { id: 3, vendor: 'Bitcoin', cardNumber: '6720 4519 2443 2976', cardHolder: 'John Finlay', valid: '20/02'}
+        { id: 4, vendor: 'Bitcoin', cardNumber: '6720 4519 2443 2976', cardHolder: 'John Finlay', valid: '20/02'}
       ],
       currentCard: { id: 0, vendor: 'Bitcoin', cardNumber: '6720 4519 2443 2976', cardHolder: 'Joe Exotic', valid: '20/02'}
+    }
+  },
+  methods: {
+    switchCard(id) {
+      const newCurrentCard = this.cards.find(card => card.id === id);
+      console.log(newCurrentCard);
+      const lastCurrentCard = this.currentCard;
+      this.currentCard = newCurrentCard;
+      this.cards.push(lastCurrentCard);
+      const index = this.cards.findIndex(card => card.id === id);
+      console.log(index);
+      this.cards.splice(index, 1);
     }
   }
 }

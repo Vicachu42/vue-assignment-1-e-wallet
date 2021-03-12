@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Thirteenth commit: A lot has happened. I managed to add my top card (I was of by this -><- much) and added a function to change the top card by clicking on a card in the stack. Fixing some design elements, then starting out with the card input.
+
 Twelth commit: Changed my top and added a button with a routing method to the Add card-page.
 
 Eleventh commit: Some steps forward. I'm completely happy with the card designs now and currently working on my home view. I'm mostly trying different things to figure it out, but it's probably time for a break now.

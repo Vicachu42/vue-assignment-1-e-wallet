@@ -1,7 +1,11 @@
 <template>
 <div class="homeView">
   <Top message="E-wallet"/>
-  <CardStack v-bind:cards="cards"/>
+  <section class="topCard">
+    <p class="activeCard">Active card</p>
+    <Card v-bind:card="currentCard" v-bind:class="currentCard"/>
+  </section>
+  <CardStack v-bind:cards="cards" v-on:switch-card="switchCard"/>
   <section class="addCard">
       <button class="addButton" @click="addNewCard">Add a new card</button>
   </section>
@@ -9,8 +13,8 @@
 </template>
 
 <script>
-import Top from '../components/Top'
-import Card from '../components/Card'
+import Top from '../components/Top.vue'
+import Card from '../components/Card.vue'
 import CardStack from '../components/CardStack.vue'
 
 export default {
@@ -27,6 +31,9 @@ export default {
   methods: {
     addNewCard() {
       this.$router.push('/add');
+    },
+    switchCard(id) {
+      this.$emit('switch-card', id);
     }
   }
 }
@@ -46,30 +53,19 @@ h1 {
   color: #3a3a3a;
 }
 
-.addButton {
-  height: 80px;
-  width: 382px;
-  background-color: white;
-  border-color: black;
-  border-radius: 8px;
-  font-family: 'PT Mono', monospace;
-  font-weight: 700;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-
-/* .topCard {
+.topCard {
   height: 241px;
   width: 382px;
   border-radius: 8px;
   padding: 20px;
-} */
+}
 
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .card {
@@ -77,14 +73,13 @@ h1 {
   width: 382px;
   border-radius: 8px;
   padding: 20px;
-  /* margin-bottom: -180px; */
+  margin-bottom: -180px;
   box-sizing: border-box;
   color: white;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
   display: grid;
   grid-template-columns: 85% 1fr;
-  grid-template-rows: 45% 35% 20%
-  ;
+  grid-template-rows: 45% 35% 20%;
   grid-template-areas: "cardChip cardLogo"
   "cardNumber cardNumber"
   "cardHolder validThru";
@@ -139,5 +134,17 @@ h1 {
 
 .blockchain {
   background: linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%), #8B58F9;
+}
+
+.addButton {
+  height: 80px;
+  width: 382px;
+  background-color: white;
+  border-color: black;
+  border-radius: 8px;
+  font-family: 'PT Mono', monospace;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="addCard">
-    <h1>Add card</h1>
+    <Top message="Add new card" />
     <form>
       <label>Card number</label>
       <input type="text" v-model="add.number" required />
@@ -17,7 +17,12 @@
 </template>
 
 <script>
+import Top from '../components/Top.vue'
+
 export default {
+  components: {
+    Top
+  },
   data() {
     return {
       add: {
