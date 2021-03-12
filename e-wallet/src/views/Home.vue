@@ -6,7 +6,7 @@
     <Card v-bind:card="currentCard" v-bind:class="currentCard"/>
   </section>
   <CardStack v-bind:cards="cards" v-on:switch-card="switchCard"/>
-  <section class="addCard">
+  <section>
       <button class="addButton" @click="addNewCard">Add a new card</button>
   </section>
   </div>
