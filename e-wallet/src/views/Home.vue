@@ -1,25 +1,33 @@
 <template>
 <div class="homeView">
-  <h1>E-wallet</h1>
-  <Top v-bind:currentCard="currentCard"/>
+  <Top message="E-wallet"/>
   <CardStack v-bind:cards="cards"/>
-  <button>Add a new card</button>
+  <section class="addCard">
+      <button class="addButton" @click="addNewCard">Add a new card</button>
+  </section>
   </div>
 </template>
 
 <script>
 import Top from '../components/Top'
+import Card from '../components/Card'
 import CardStack from '../components/CardStack.vue'
 
 export default {
   name: 'Home',
   components: {
     Top,
+    Card,
     CardStack
   },
   props: {
     cards: Array,
     currentCard: Object
+  },
+  methods: {
+    addNewCard() {
+      this.$router.push('/add');
+    }
   }
 }
 </script>
@@ -36,6 +44,18 @@ h1 {
   font-weight: 600;
   font-size: 12px;
   color: #3a3a3a;
+}
+
+.addButton {
+  height: 80px;
+  width: 382px;
+  background-color: white;
+  border-color: black;
+  border-radius: 8px;
+  font-family: 'PT Mono', monospace;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 /* .topCard {
@@ -57,7 +77,7 @@ h1 {
   width: 382px;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: -180px;
+  /* margin-bottom: -180px; */
   box-sizing: border-box;
   color: white;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);

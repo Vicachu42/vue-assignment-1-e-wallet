@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Twelth commit: Changed my top and added a button with a routing method to the Add card-page.
+
 Eleventh commit: Some steps forward. I'm completely happy with the card designs now and currently working on my home view. I'm mostly trying different things to figure it out, but it's probably time for a break now.
 
 Tenth commit: I had a bit of problem with my routing, but sorted it out through changing my paths. Now I'm getting somewhere.
