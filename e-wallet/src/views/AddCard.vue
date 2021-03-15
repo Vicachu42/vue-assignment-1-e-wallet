@@ -1,7 +1,7 @@
 <template>
   <div class="addCard">
     <Top message="Add new card" />
-    <CardForm />
+    <CardForm v-on:add-new-card="addNewCard" />
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
   components: {
     Top,
     CardForm
+  },
+  methods: {
+    addNewCard: function(newCard) {
+      console.log('Hej!');
+      this.$emit('add-new-card', newCard);
+    }
   }
 }
 </script>
@@ -24,8 +30,12 @@ export default {
   justify-content: center;
 }
 
-label {
-  font-size: 12px;
+.exampleCard {
+  height: 241px;
+  width: 382px;
+  border-radius: 8px;
+  padding: 17px;
+  margin-bottom: 20px;
 }
 
 .new__card {
@@ -42,11 +52,16 @@ label {
   "card__vendor card__vendor";
 }
 
+label {
+  font-size: 12px;
+}
+
 input {
   width: 382px;
   height: 56px;
   border-radius: 8px;
   padding-left: 10px;
+  box-sizing: border-box;
 }
 
 select {
@@ -54,6 +69,7 @@ select {
   height: 56px;
   border-radius: 8px;
   padding-left: 10px;
+  box-sizing: border-box;
 }
 
 .cardValid {

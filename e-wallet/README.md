@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Fifteenth commit: Form and functionality is finally in place! I'm taking a break, then rechecking the code before submitting the assignment.
+
 Fourteenth commit: I'm still having a bit of problem with adding a new card to the stack, but I've solved the design for the input form.
 
 Thirteenth commit: A lot has happened. I managed to add my top card (I was of by this -><- much) and added a function to change the top card by clicking on a card in the stack. Fixing some design elements, then starting out with the card input.

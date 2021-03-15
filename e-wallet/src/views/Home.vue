@@ -83,6 +83,7 @@ h1 {
   padding: 20px;
   margin-bottom: -180px;
   box-sizing: border-box;
+  background-color: grey;
   color: white;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
   display: grid;

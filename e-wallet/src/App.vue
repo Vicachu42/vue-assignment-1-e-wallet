@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view v-bind:cards="cards" v-bind:currentCard="currentCard" v-on:switch-card="switchCard"></router-view>
+    <router-view v-bind:cards="cards" v-bind:currentCard="currentCard" v-on:switch-card="switchCard" v-on:add-new-card="addNewCard"></router-view>
   </div>
 </template>
 
@@ -28,6 +28,9 @@ export default {
       const index = this.cards.findIndex(card => card.id === id);
       console.log(index);
       this.cards.splice(index, 1);
+    },
+    addNewCard: function(newCard) {
+      this.cards.push(newCard);
     }
   }
 }

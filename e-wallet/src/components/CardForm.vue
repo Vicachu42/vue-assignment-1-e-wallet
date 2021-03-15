@@ -1,8 +1,8 @@
 <template>
     <div>
-        <!-- <Card v-bind:card="newCard">
-            <p>{{ cardNumber }}</p>
-        </Card> -->
+        <section class="exampleCard">
+            <Card v-bind:card="newCard" />
+        </section>
         <section>
             <form class="new__card">
                 <div id="card__number__input">
@@ -10,7 +10,7 @@
                     <input 
                         class="cardNumberInput" 
                         type="text"
-                        v-model.number="newCard.cardNumberInput"
+                        v-model.number="newCard.cardNumber"
                         name="cardNumberInput"
                         placeholder="xxxx xxxx xxxx xxxx"
                         required
@@ -32,7 +32,7 @@
                     <input 
                         class="cardValid" 
                         type="text"
-                        v-model.number="newCard.cardValid"
+                        v-model.number="newCard.valid"
                         name="cardValid"
                         placeholder="MM/YY"
                         required
@@ -51,11 +51,11 @@
                 </div>
                 <div id="card__vendor">
                     <label>card vendor</label>
-                    <select class="cardVendor" required>
-                        <option value="bitcoin">Bitcoin</option>
-                        <option value="evil">Evil Corp</option>
-                        <option value="ninja">Ninja</option>
-                        <option value="blockchain">Block Chain</option>
+                    <select class="cardVendor" v-model="newCard.vendor" required>
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Evil Corp">Evil Corp</option>
+                        <option value="Ninja Bank">Ninja</option>
+                        <option value="Block Chain">Block Chain</option>
                     </select>
                 </div>
             </form>
@@ -67,39 +67,39 @@
 </template>
 
 <script>
-// import Card from './Card.vue'
+import Card from './Card.vue'
 
 export default {
     name: 'CardForm',
-    // components: {
-    //     Card
-    // },
+    components: {
+        Card
+    },
     data: () => {
         return {
             newCard: {
-                cardNumberInput: "",
-                cardHolder: "",
-                cardValid: "",
-                cardCCV: "",
-                cardVendor: ""
+                cardNumberInput: '',
+                cardHolder: '',
+                cardValid: '',
+                cardCCV: '',
+                cardVendor: ''
             }
         }
     },
     methods: {
         createCard() {
             const newCard = {
-                cardNumberInput: this.newCard.cardNumberInput,
+                cardNumber: this.newCard.cardNumber,
                 cardHolder: this.newCard.cardHolder,
-                cardValid: this.newCard.cardValid,
+                valid: this.newCard.valid,
                 cardCCV: this.newCard.cardCCV,
-                cardVendor: this.newCard.cardVendor
+                vendor: this.newCard.vendor
             };
             console.log(newCard);
 
-            // this.$emit("newCard", cards)
-            // this.$emit("add-new-card", newCard)
+            // this.$emit(newCard, cards)
             // this.cards.push(newCard);
 
+            this.$emit('add-new-card', newCard);
             this.$router.push("/");
         }
     }
