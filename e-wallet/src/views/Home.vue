@@ -1,5 +1,5 @@
 <template>
-<div class="homeView">
+<div>
   <Top message="E-wallet"/>
   <section class="topCard">
     <p class="activeCard">Active card</p>

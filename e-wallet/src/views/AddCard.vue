@@ -1,23 +1,18 @@
 <template>
   <div class="addCard">
     <Top message="Add new card" />
-    <article class="new__card">
-      <NewCard />
-    </article>
-    <section>
-      <button class="addButton">Add card</button>
-    </section>
+    <CardForm />
   </div>
 </template>
 
 <script>
 import Top from '../components/Top.vue'
-import NewCard from '../components/NewCard'
+import CardForm from '../components/CardForm'
 
 export default {
   components: {
     Top,
-    NewCard
+    CardForm
   }
 }
 </script>
@@ -29,15 +24,21 @@ export default {
   justify-content: center;
 }
 
-.new__card {
-  text-align: left;
-}
-
 label {
   font-size: 12px;
 }
 
+.new__card {
+  text-align: left;
+}
+
 input {
+  width: 382px;
+  height: 56px;
+  border-radius: 8px;
+}
+
+select {
   width: 382px;
   height: 56px;
   border-radius: 8px;
