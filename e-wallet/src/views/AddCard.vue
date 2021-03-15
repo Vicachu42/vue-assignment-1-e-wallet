@@ -46,10 +46,10 @@ export default {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   gap: 10px;
-  grid-template-areas: "card__number__input card__number__input"
+  grid-template-areas: "card__vendor card__vendor"
+  "card__number__input card__number__input"
   "card__name card__name"
-  "card__valid card__CCV"
-  "card__vendor card__vendor";
+  "card__valid card__CCV";
 }
 
 label {
@@ -62,6 +62,7 @@ input {
   border-radius: 8px;
   padding-left: 10px;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 select {
@@ -70,6 +71,7 @@ select {
   border-radius: 8px;
   padding-left: 10px;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 .cardValid {

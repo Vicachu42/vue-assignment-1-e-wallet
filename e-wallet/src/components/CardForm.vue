@@ -10,9 +10,12 @@
                     <input 
                         class="cardNumberInput" 
                         type="text"
-                        v-model.number="newCard.cardNumber"
+                        v-model="newCard.cardNumber"
+                        v-mask=" '#### #### #### ####' "
                         name="cardNumberInput"
                         placeholder="xxxx xxxx xxxx xxxx"
+                        minlength="16"
+                        maxlength="19"
                         required
                     />
                 </div>
@@ -32,9 +35,12 @@
                     <input 
                         class="cardValid" 
                         type="text"
-                        v-model.number="newCard.valid"
+                        v-model="newCard.valid"
+                        v-mask=" '##/##' "
                         name="cardValid"
                         placeholder="MM/YY"
+                        minlength="5"
+                        maxlength="5"
                         required
                     />
                 </div>
@@ -44,8 +50,11 @@
                         class="cardCCV" 
                         type="text" 
                         v-model.number="newCard.cardCCV"
+                        v-mask=" '###' "
                         name="cardCCV"
                         placeholder="xxx"
+                        minlength="3"
+                        maxlength="3"
                         required
                     />
                 </div>

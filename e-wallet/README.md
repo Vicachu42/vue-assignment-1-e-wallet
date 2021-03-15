@@ -1,6 +1,8 @@
 Vue assignment - E-wallet
 --
 
+Final commit: I made some design changes using v-mask which makes input into the form easier. While I am satisfied with the project, I admit there are some more small fixes that would have elevated the project further. If I ever feel inclined I might have a look in the future.
+
 Fifteenth commit: Form and functionality is finally in place! I'm taking a break, then rechecking the code before submitting the assignment.
 
 Fourteenth commit: I'm still having a bit of problem with adding a new card to the stack, but I've solved the design for the input form.
